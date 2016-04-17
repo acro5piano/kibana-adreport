@@ -1,6 +1,8 @@
-# kibana-import-csv-with-python
+# Kibana Adreport
 
-Import CSV file to Elasticsearch
+Let's Analyze Advertisement data using Kibana.
+
+This software import ad_data from CSV into Elasticsearch.
 
 # Installation
 
