@@ -1,6 +1,6 @@
 """
-Import csv data and create index to elasticsearch
-This code is prototype
+Import csv data and create index to elasticsearch.
+*This code is prototype*
 """
 
 import pandas as pd
@@ -13,16 +13,14 @@ try:
 except:
 	pass
 
-df = pd.read_csv('ENTER_CSV_FILEPATH_TO_BE_IMPORTED ')
+# Open csv file
+df = pd.read_csv('sample_data.csv')
 fields = df.columns
 
+# Import data
 for _, row in df.iterrows():
 	data_dict = {}
 	for f in fields:
 		data_dict[f] = row[f]
 	es.index(index='ad_reports', doc_type='test', body=data_dict) 
-
-
-
-
 
